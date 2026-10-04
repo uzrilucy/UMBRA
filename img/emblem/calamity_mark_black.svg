@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200"><defs></defs>
+  <path d="M60,100 Q100,62 140,100 Q100,138 60,100 Z" fill="none" stroke="#111111" stroke-width="3.2" stroke-linejoin="round"/>
+  <path fill-rule="evenodd" d="M114.50,100.00 A14.5,14.5 0 1 0 85.50,100.00 A14.5,14.5 0 1 0 114.50,100.00 Z M100,88 Q103.4,100 100,112 Q96.6,100 100,88 Z M107.80,94.00 A1.8,1.8 0 1 0 104.20,94.00 A1.8,1.8 0 1 0 107.80,94.00 Z" fill="#111111"/>
+  <path d="M96.86,70.16 Q102.93,44.08 100.00,18.00 L103.14,70.16 Z" fill="#111111"/>
+  <path d="M132.36,76.49 Q149.01,75.03 160.62,65.00 L136.54,83.73 Z" fill="#111111"/>
+  <path d="M136.54,116.27 Q151.16,133.22 171.01,141.00 L132.36,123.51 Z" fill="#111111"/>
+  <path d="M103.14,129.84 Q97.38,149.93 100.00,170.00 L96.86,129.84 Z" fill="#111111"/>
+  <path d="M67.64,123.51 Q45.65,127.69 28.99,141.00 L63.46,116.27 Z" fill="#111111"/>
+  <path d="M63.46,83.73 Q53.87,70.04 39.38,65.00 L67.64,76.49 Z" fill="#111111"/>
+  <path d="M157.73,33.59 A88,88 0 0 1 186.38,83.21" fill="none" stroke="#111111" stroke-width="1.6"/>
+  <g transform="rotate(0 144.0 23.79)"><path d="M139.0,18.79 Q144.0,13.79 149.0,18.79" fill="none" stroke="#111111" stroke-width="1.4"/><path fill-rule="evenodd" d="M141.5,19.79 H146.5 Q149.0,19.79 149.0,22.29 V28.29 Q149.0,30.79 146.5,30.79 H141.5 Q139.0,30.79 139.0,28.29 V22.29 Q139.0,19.79 141.5,19.79 Z M144.0,22.29 Q146.6,25.79 144.0,28.29 Q141.4,25.79 144.0,22.29 Z" fill="#111111"/></g>
+  <path d="M186.38,116.79 A88,88 0 0 1 157.73,166.41" fill="none" stroke="#111111" stroke-width="1.6"/>
+  <g transform="rotate(0 188.0 100.0)"><path d="M182.0,107.0 C179.0,98.0 190.0,91.0 193.0,97.0 C196.0,103.0 188.0,105.0 189.0,99.0" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round"/></g>
+  <path d="M128.65,183.21 A88,88 0 0 1 71.35,183.21" fill="none" stroke="#111111" stroke-width="1.6"/>
+  <g transform="rotate(0 144.0 176.21)"><path d="M136.0,175.21 A8,8 0 0 1 152.0,175.21 Q149.3,173.21 146.7,175.21 Q144.0,173.21 141.3,175.21 Q138.7,173.21 136.0,175.21 Z" fill="#111111"/><path d="M144.0,175.21 L144.0,183.21 Q144.0,185.71 141.5,185.21" fill="none" stroke="#111111" stroke-width="1.4" stroke-linecap="round"/></g>
+  <path d="M42.27,166.41 A88,88 0 0 1 13.62,116.79" fill="none" stroke="#111111" stroke-width="1.6"/>
+  <g transform="rotate(0 56.0 176.21)"><path d="M56.0,167.21 L56.0,185.21" stroke="#111111" stroke-width="1.8"/><path d="M56.0,170.21 L50.0,167.21 M56.0,170.21 L62.0,167.21" stroke="#111111" stroke-width="1.3" stroke-linecap="round"/><path d="M56.0,175.21 L50.0,172.21 M56.0,175.21 L62.0,172.21" stroke="#111111" stroke-width="1.3" stroke-linecap="round"/><path d="M56.0,180.21 L50.0,177.21 M56.0,180.21 L62.0,177.21" stroke="#111111" stroke-width="1.3" stroke-linecap="round"/></g>
+  <path d="M13.62,83.21 A88,88 0 0 1 42.27,33.59" fill="none" stroke="#111111" stroke-width="1.6"/>
+  <g transform="rotate(0 12.0 100.0)"><circle cx="12.0" cy="100.0" r="7.5" fill="none" stroke="#111111" stroke-width="2"/><circle cx="12.0" cy="100.0" r="2.4" fill="#111111"/></g>
+  <path d="M71.35,16.79 A88,88 0 0 1 128.65,16.79" fill="none" stroke="#111111" stroke-width="1.6"/>
+  <g transform="rotate(0 56.0 23.79)"><path fill-rule="evenodd" d="M56.0,13.79 C62.0,18.79 61.0,27.79 56.0,31.79 C51.0,27.79 50.0,18.79 56.0,13.79 Z M55.55,17.79 L55.55,30.29 L56.45,30.29 L56.45,17.79 Z" fill="#111111"/><path d="M56.0,30.79 L56.0,34.79" stroke="#111111" stroke-width="1" stroke-linecap="round"/></g>
+  <circle cx="100" cy="100" r="56" fill="none" stroke="#111111" stroke-width="0.8" stroke-dasharray="1.5 3.5"/>
+</svg>

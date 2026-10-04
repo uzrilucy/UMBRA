@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200"><defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="0" y1="8" x2="0" y2="192"><stop offset="0" stop-color="#f4b884"/><stop offset="0.45" stop-color="#cf7339"/><stop offset="1" stop-color="#8a4422"/></linearGradient></defs>
+  <path d="M156.51,69.95 A64,64 0 1 1 130.05,43.49" fill="none" stroke="url(#g)" stroke-width="10"/>
+  <path d="M129.71,37.72 L131.75,38.74 L134.05,42.88 L129.45,43.18 L131.49,47.17 L127.15,47.62 L125.40,46.75 Z" fill="url(#g)"/>
+  <path d="M162.28,70.29 L161.26,68.25 L157.12,65.95 L156.82,70.55 L152.83,68.51 L152.38,72.85 L153.25,74.60 Z" fill="url(#g)"/>
+  <path d="M151.42,34.22 L155.02,40.52 L148.27,41.42 Z" fill="url(#g)" transform="rotate(20 151.42 38.72)"/>
+  <path d="M168.94,39.15 L171.34,43.35 L166.84,43.95 Z" fill="url(#g)" transform="rotate(-15 168.94 42.15)"/>
+  <path d="M163.84,54.54 L165.76,57.90 L162.16,58.38 Z" fill="url(#g)" transform="rotate(40 163.84 56.94)"/>
+  <g transform="translate(104,98) rotate(36)"><path fill-rule="evenodd" d="M0,-70 C9,-42 11,-10 8,42 L6,44 L8,36 L2,56 L0,60 L-2,56 L-7,40 L-5,42 L-8,32 C-11,-10 -9,-42 0,-70 Z M-0.65,-60.00 L-0.65,57.00 L0.65,57.00 L0.65,-60.00 Z M1.12,-39.68 L7.52,-46.18 L6.88,-46.82 L0.48,-40.32 Z M-0.48,-26.32 L-6.88,-32.82 L-7.52,-32.18 L-1.12,-25.68 Z M1.12,-9.68 L7.52,-16.18 L6.88,-16.82 L0.48,-10.32 Z M-0.48,5.68 L-6.88,-0.82 L-7.52,-0.18 L-1.12,6.32 Z M1.12,20.32 L7.52,13.82 L6.88,13.18 L0.48,19.68 Z M-0.48,31.68 L-6.88,25.18 L-7.52,25.82 L-1.12,32.32 Z" fill="url(#g)"/><path d="M0,59 L0,82" stroke="url(#g)" stroke-width="2.2" stroke-linecap="round"/></g>
+  <path d="M100,169 L100,176" stroke="url(#g)" stroke-width="1.6"/>
+  <rect x="78" y="176" width="44" height="20" rx="2" fill="none" stroke="url(#g)" stroke-width="1.6"/>
+  <rect x="83.00" y="180" width="1.6" height="12" fill="url(#g)"/>
+  <rect x="85.85" y="180" width="0.8" height="12" fill="url(#g)"/>
+  <rect x="87.90" y="180" width="2.2" height="12" fill="url(#g)"/>
+  <rect x="91.35" y="180" width="0.8" height="12" fill="url(#g)"/>
+  <rect x="93.40" y="180" width="1.2" height="12" fill="url(#g)"/>
+  <rect x="95.85" y="180" width="2.4" height="12" fill="url(#g)"/>
+  <rect x="99.50" y="180" width="0.8" height="12" fill="url(#g)"/>
+  <rect x="101.55" y="180" width="1.6" height="12" fill="url(#g)"/>
+  <rect x="104.40" y="180" width="0.8" height="12" fill="url(#g)"/>
+  <rect x="106.45" y="180" width="2" height="12" fill="url(#g)"/>
+  <rect x="109.70" y="180" width="1.2" height="12" fill="url(#g)"/>
+  <rect x="112.15" y="180" width="0.8" height="12" fill="url(#g)"/>
+  <rect x="114.20" y="180" width="1.8" height="12" fill="url(#g)"/>
+  <path d="M74,196 L126,176" stroke="url(#g)" stroke-width="2.4" stroke-linecap="round"/>
+</svg>
