@@ -749,6 +749,9 @@ i.s{background:var(--gold)}
 @media (max-width:980px){.cal-y{grid-template-columns:repeat(6,minmax(0,1fr))}}
 @media (max-width:560px){.cal-y{grid-template-columns:repeat(3,minmax(0,1fr))}.cal-m{min-height:96px}}
 
+/* hidden attribute must always win over component display rules (NAI tag tabs, demos, filters) */
+[hidden]{display:none!important}
+
 </style>
 </head>
 <body>
