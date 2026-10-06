@@ -753,6 +753,10 @@ i.s{background:var(--gold)}
 /* hidden attribute must always win over component display rules (NAI tag tabs, demos, filters) */
 [hidden]{display:none!important}
 
+.hero-cta .btn.btn-nai{border-color:rgba(224,184,115,.6);color:#f7dca2}
+.hero-cta .btn.btn-nai i{font-style:normal;color:#e0b873}
+.hero-cta .btn.btn-nai:hover{background:rgba(224,184,115,.1);border-color:#e0b873}
+
 </style>
 </head>
 <body>
@@ -794,6 +798,7 @@ i.s{background:var(--gold)}
         <a class="btn btn-gold" href="#eclipse">세계관부터 읽기</a>
         <a class="btn" href="#codex">인물 도감 열기 →</a>
         <a class="btn" href="#numbers">잠식률 계산기</a>
+        <a class="btn btn-nai" href="#tags"><i aria-hidden="true">✦</i>NAI 태그</a>
       </div>
       <div class="hero-stats">
         <div><b>49</b><span>원식 이후 흐른 해</span></div>
