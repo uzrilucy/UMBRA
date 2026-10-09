@@ -757,6 +757,41 @@ i.s{background:var(--gold)}
 .hero-cta .btn.btn-nai i{font-style:normal;color:#e0b873}
 .hero-cta .btn.btn-nai:hover{background:rgba(224,184,115,.1);border-color:#e0b873}
 
+/* ---------------- theme BGM ---------------- */
+.bgm{position:relative;flex:none}
+.bgm + .theme-btn{margin-left:0}
+.bgm-ico{display:flex;align-items:flex-end;gap:2px;height:14px}
+.bgm-ico i{width:2px;height:4px;background:currentColor;border-radius:1px;opacity:.75;transition:height .3s}
+.bgm-ico i:nth-child(2){height:9px}.bgm-ico i:nth-child(3){height:6px}.bgm-ico i:nth-child(4){height:11px}
+.bgm.on .bgm-btn{border-color:var(--gold);box-shadow:0 0 0 1px rgba(224,184,115,.25),0 0 14px rgba(224,184,115,.25)}
+.bgm.on .bgm-ico i{animation:bgmEq 1.1s ease-in-out infinite alternate}
+.bgm.on .bgm-ico i:nth-child(2){animation-delay:-.35s}.bgm.on .bgm-ico i:nth-child(3){animation-delay:-.7s}.bgm.on .bgm-ico i:nth-child(4){animation-delay:-.2s}
+@keyframes bgmEq{0%{height:3px}100%{height:14px}}
+@media (prefers-reduced-motion:reduce){.bgm.on .bgm-ico i{animation:none}}
+.bgm-panel{position:absolute;right:0;top:calc(100% + 12px);width:250px;padding:14px 14px 12px;background:var(--bg);border:1px solid var(--line-2);box-shadow:0 18px 40px rgba(0,0,0,.45);z-index:60}
+.bgm-panel[hidden]{display:none}
+.bgm-panel::before{content:"";position:absolute;right:13px;top:-6px;width:10px;height:10px;background:var(--bg);border-left:1px solid var(--line-2);border-top:1px solid var(--line-2);transform:rotate(45deg)}
+.bgm-head small{display:block;font-family:var(--f-mono,monospace);font-size:10px;letter-spacing:.3em;color:var(--ink-3,#8e877a)}
+.bgm-head b{display:block;margin-top:3px;font-family:var(--f-ser,serif);font-size:15px;color:var(--gold-hi)}
+.bgm-tracks{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:12px}
+.bgm-tracks button{display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:9px 10px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;text-align:left;transition:border-color .2s,background .2s}
+.bgm-tracks button em{font-style:normal;font-size:11px;letter-spacing:.2em;color:var(--ink-3,#8e877a)}
+.bgm-tracks button span{font-size:12.5px}
+.bgm-tracks button:hover{border-color:var(--line-2)}
+.bgm-tracks button[aria-checked="true"]{border-color:var(--gold);background:rgba(224,184,115,.08)}
+.bgm-tracks button[aria-checked="true"] em{color:var(--gold)}
+.bgm-tracks button[data-trk="night"][aria-checked="true"]{border-color:#c4384a;background:rgba(196,56,74,.10)}
+.bgm-tracks button[data-trk="night"][aria-checked="true"] em{color:#ff6a76}
+.bgm-row{display:flex;align-items:center;gap:10px;margin-top:12px}
+.bgm-play{flex:none;width:38px;height:38px;display:grid;place-items:center;border-radius:50%;border:1px solid var(--gold);background:linear-gradient(180deg,#f2d39a,#c58f45);cursor:pointer}
+.bgm-play svg{width:16px;height:16px;fill:#1a0f08}
+.bgm-play .p-pause{display:none}.bgm.on .bgm-play .p-pause{display:block}.bgm.on .bgm-play .p-play{display:none}
+.bgm-vol{flex:1;display:flex;align-items:center}
+.bgm-vol input{width:100%;accent-color:#e0b873}
+.bgm-note{margin:10px 0 0;font-size:11px;line-height:1.5;color:var(--ink-3,#8e877a)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media (max-width:560px){.bgm-panel{position:fixed;right:12px;left:12px;top:66px;width:auto}.bgm-panel::before{display:none}}
+
 </style>
 </head>
 <body>
@@ -777,6 +812,21 @@ i.s{background:var(--gold)}
       <a href="#glossary"><em>¶</em>용어집</a>
       <a href="#tags" class="nav-x"><em>✦</em>NAI 태그</a>
     </nav>
+    <div class="bgm" id="bgm">
+      <button class="theme-btn bgm-btn" id="bgmBtn" type="button" aria-label="테마곡 열기" aria-expanded="false" aria-controls="bgmPanel" title="테마곡"><span class="bgm-ico" aria-hidden="true"><i></i><i></i><i></i><i></i></span></button>
+      <div class="bgm-panel" id="bgmPanel" hidden>
+        <div class="bgm-head"><small>THEME · BGM</small><b>UMBRA 테마곡</b></div>
+        <div class="bgm-tracks" role="radiogroup" aria-label="곡 고르기">
+          <button type="button" role="radio" data-trk="day" aria-checked="false"><em>낮</em><span>「금빛 새장」</span></button>
+          <button type="button" role="radio" data-trk="night" aria-checked="false"><em>밤</em><span>「붉은 비」</span></button>
+        </div>
+        <div class="bgm-row">
+          <button type="button" class="bgm-play" id="bgmPlay" aria-label="재생"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="p-play" d="M8 5l11 7-11 7z"/><path class="p-pause" d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
+          <label class="bgm-vol"><span class="sr">음량</span><input type="range" id="bgmVol" min="0" max="100" value="55" aria-label="음량"></label>
+        </div>
+        <p class="bgm-note">처음엔 꺼져 있어요. 누를 때만 재생됩니다.</p>
+      </div>
+    </div>
     <button class="theme-btn" id="themeBtn" type="button" aria-label="밝은 테마와 어두운 테마 전환" title="일식 / 백장"></button>
   </div>
 </header>
@@ -2138,6 +2188,90 @@ function copy(text, el){
   }
   window.addEventListener("hashchange", route); route();
 })();
+})();
+
+/* ---------------- theme BGM (off by default; plays only on user action) ---------------- */
+(function(){
+  var box = document.getElementById("bgm"); if (!box) return;
+  var btn = document.getElementById("bgmBtn"), panel = document.getElementById("bgmPanel"),
+      play = document.getElementById("bgmPlay"), vol = document.getElementById("bgmVol");
+  // true loop lengths (seconds) — mp3 adds encoder padding, so loop by these, not by file length
+  var TRK = { day: { src: "umbra_bgm_day.mp3", len: 91.428571 }, night: { src: "umbra_bgm_night.mp3", len: 99.310340 } };
+  function st(k, v){ try{ if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); }catch(e){ return null; } }
+  function themeDark(){ var t = document.documentElement.getAttribute("data-theme"); if (t) return t === "dark"; return !(window.matchMedia && matchMedia("(prefers-color-scheme: light)").matches); }
+  var trk = st("umbra-bgm-track"); if (trk !== "day" && trk !== "night") trk = themeDark() ? "night" : "day";
+  var v0 = parseInt(st("umbra-bgm-vol"), 10); if (!isNaN(v0)) vol.value = v0;
+  var playing = false, ctx = null, master = null, cur = null, buffers = {}, useEl = false, el = null, elFade = null;
+  function level(){ return Math.pow(vol.value / 100, 1.6) * 0.9; }
+  function mark(){
+    Array.prototype.forEach.call(panel.querySelectorAll("[data-trk]"), function(b){ b.setAttribute("aria-checked", b.getAttribute("data-trk") === trk ? "true" : "false"); });
+    box.classList.toggle("on", playing);
+    play.setAttribute("aria-label", playing ? "정지" : "재생");
+    btn.setAttribute("aria-label", playing ? "테마곡 재생 중 · 열기" : "테마곡 열기");
+  }
+  /* --- Web Audio path: gapless loop --- */
+  function load(k){
+    if (buffers[k]) return Promise.resolve(buffers[k]);
+    return fetch(TRK[k].src).then(function(r){ if (!r.ok) throw 0; return r.arrayBuffer(); })
+      .then(function(ab){ return new Promise(function(res, rej){ ctx.decodeAudioData(ab, res, rej); }); })
+      .then(function(buf){
+        var d = buf.getChannelData(0), off = 0, n = Math.min(d.length, 8192);
+        while (off < n && Math.abs(d[off]) < 1e-4) off++;           // skip encoder priming silence
+        var ls = off / buf.sampleRate, le = Math.min(buf.duration, ls + TRK[k].len);
+        buffers[k] = { buf: buf, ls: ls, le: le }; return buffers[k];
+      });
+  }
+  function voice(k, at, fadeIn){
+    return load(k).then(function(b){
+      var src = ctx.createBufferSource(), g = ctx.createGain();
+      src.buffer = b.buf; src.loop = true; src.loopStart = b.ls; src.loopEnd = b.le;
+      src.connect(g); g.connect(master);
+      var t = ctx.currentTime; g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(1, t + fadeIn);
+      src.start(t, b.ls); return { src: src, g: g, k: k };
+    });
+  }
+  function drop(v, sec){ if (!v) return; var t = ctx.currentTime; v.g.gain.cancelScheduledValues(t); v.g.gain.setValueAtTime(v.g.gain.value, t); v.g.gain.linearRampToValueAtTime(0, t + sec); v.src.stop(t + sec + 0.05); }
+  function ensureCtx(){
+    if (ctx) return true;
+    var AC = window.AudioContext || window.webkitAudioContext; if (!AC || location.protocol === "file:") { useEl = true; return false; }
+    ctx = new AC(); master = ctx.createGain(); master.gain.value = level(); master.connect(ctx.destination); return true;
+  }
+  /* --- fallback: <audio loop> --- */
+  function elFadeTo(to, ms, done){ clearInterval(elFade); var from = el.volume, n = Math.max(1, Math.round(ms / 40)), i = 0;
+    elFade = setInterval(function(){ i++; el.volume = Math.max(0, Math.min(1, from + (to - from) * i / n)); if (i >= n){ clearInterval(elFade); if (done) done(); } }, 40); }
+  function elStart(k){ if (el) el.pause(); el = new Audio(TRK[k].src); el.loop = true; el.volume = 0; var p = el.play(); if (p && p.catch) p.catch(function(){ playing = false; mark(); }); elFadeTo(level(), 1200); }
+
+  function start(){
+    playing = true; mark();
+    if (ensureCtx() && !useEl){
+      if (ctx.state === "suspended") ctx.resume();
+      voice(trk, 0, 1.4).then(function(v){ if (!playing || trk !== v.k){ drop(v, 0.2); return; } drop(cur, 0.3); cur = v; })
+        .catch(function(){ useEl = true; if (playing) elStart(trk); });
+    } else elStart(trk);
+  }
+  function stop(){
+    playing = false; mark();
+    if (cur){ drop(cur, 0.7); cur = null; }
+    if (el){ var a = el; elFadeTo(0, 600, function(){ a.pause(); }); }
+  }
+  function swap(k){
+    if (k === trk) return; trk = k; st("umbra-bgm-track", k); mark();
+    if (!playing) return;
+    if (ctx && !useEl){ var old = cur; voice(k, 0, 2.0).then(function(v){ if (!playing || trk !== v.k){ drop(v, 0.2); return; } drop(old, 2.0); cur = v; }); }
+    else { var o = el; el = null; if (o){ var f = o.volume, i = 0; var t = setInterval(function(){ i++; o.volume = Math.max(0, f * (1 - i / 30)); if (i >= 30){ clearInterval(t); o.pause(); } }, 50); } elStart(k); }
+  }
+  btn.addEventListener("click", function(e){ e.stopPropagation(); var open = panel.hidden; panel.hidden = !open; btn.setAttribute("aria-expanded", open ? "true" : "false"); });
+  panel.addEventListener("click", function(e){
+    e.stopPropagation();
+    var t = e.target.closest("[data-trk]"); if (t){ var k = t.getAttribute("data-trk"); if (!playing){ trk = k; st("umbra-bgm-track", k); start(); } else swap(k); }
+  });
+  play.addEventListener("click", function(e){ e.stopPropagation(); playing ? stop() : start(); });
+  vol.addEventListener("input", function(){ st("umbra-bgm-vol", vol.value);
+    if (master) master.gain.setTargetAtTime(level(), ctx.currentTime, 0.05);
+    if (el && playing){ clearInterval(elFade); el.volume = level(); } });
+  document.addEventListener("click", function(){ if (!panel.hidden){ panel.hidden = true; btn.setAttribute("aria-expanded", "false"); } });
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape" && !panel.hidden){ panel.hidden = true; btn.setAttribute("aria-expanded", "false"); btn.focus(); } });
+  mark();
 })();
 
 </script>
